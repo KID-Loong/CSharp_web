@@ -1,0 +1,24 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# SQL Server for linux in docker
+# ----------------------------------------------------------------------------------------------------------------------
+docker-csharp-web:
+  container_name: docker-csharp-web
+  image: csharp-web:latest
+  environment:
+    - INSTANCE=local
+
+# ----------------------------------------------------------------------------------------------------------------------
+# MS SQL Server docker image for linux
+# ----------------------------------------------------------------------------------------------------------------------
+# docker run -d --name ms-sql-server -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=password' -p 1433:1433 microsoft/mssql-server-linux
+# ----------------------------------------------------------------------------------------------------------------------
+# ms-sql-server:
+#   image: microsoft/mssql-server-linux:latest
+#   environment:
+#     - ACCEPT_EULA=Y
+#   ports:
+#    - 1433:1433
+#   expose:
+#     - 1433
+#   volumes:
+#     - ../.data/mssql:/var/opt/mssql/data

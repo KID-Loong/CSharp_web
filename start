@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# -----------------------------------------------------------------------------
+set -o errexit
+set -o nounset
+set -o pipefail
+# -----------------------------------------------------------------------------
+
+function run() {
+    # Start the containers specified in the compose file
+    docker-compose -f ./Docker/docker-compose.yml up
+}
+
+run "$@"
